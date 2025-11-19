@@ -1,5 +1,9 @@
 # Dynamic Phasors Study Repo
 
+Authored by `doyun-gu` @ the University of Manchester
+
+---
+
 This repository contains simulation-based studies on dynamic phasors, supervised by **Dr. Gus**.
 
 The project goes a bit beyond the standard university coursework and is run as an individual study, with the aim of digging deeper into dynamic phasors, which are one of the key concepts in modern circuit and power-electronics analysis.
