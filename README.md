@@ -1,4 +1,4 @@
-# Study in Dynamic Phasor
+# Dynamic Phasors Study Repo
 
 This repository contains simulation-based studies on dynamic phasors, supervised by **Dr. Gus**.
 
