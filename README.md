@@ -143,12 +143,12 @@ $$
 with
 
 $$
+C = [\,0 \; 1\,], \qquad D = 0
+$$
 
-C = [\,0 \; 1\,], \qquad D = 0.
-
+$$
 \dot{\mathbf{x}} = A\mathbf{x} + B u, \qquad
-y = C\mathbf{x} + D u.
-
+y = C\mathbf{x} + D u
 $$
 
 This compact form
