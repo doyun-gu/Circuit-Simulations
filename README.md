@@ -52,7 +52,7 @@ These two-order equations describe the dynamics of the series RLC circuit.
 
 ---
 
-#Transfer Function $G(s) = {V_C(s) \over U(s)}$
+# Transfer Function $G(s) = {V_C(s) \over U(s)}$
 
 In the Laplace domain, the impedances of the elements are
 
