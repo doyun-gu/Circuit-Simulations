@@ -28,7 +28,9 @@ The library uses Modified Nodal Analysis (MNA) as its primary solution technique
 
 The entire circuit is converted into a linear system of equations of the form:
 
-$$\mathbf{A} \mathbf{x} = \mathbf{z}$$
+$$
+\mathbf{A} \mathbf{x} = \mathbf{z}
+$$
 
 |Variable|Description|Components|
 |:------:|:---------:|:--------:|
@@ -40,13 +42,13 @@ $$\mathbf{A} \mathbf{x} = \mathbf{z}$$
 
 The vector $\mathbf{x}$ is known as the Solution Vector. It contains every unknown quantity we are trying to find in the circuit. Since standard Nodal Analysis only solves for voltages, MNA adds extra rows (and corresponding columns) to the matrix to solve for crucial unknown currents.The full MNA solution vector $\mathbf{x}$ is always structured as two stacked sub-vectors:
 
-\[
+$$
 \mathbf{x} =
 \begin{bmatrix}
 \mathbf{V} \\
 \mathbf{I}
 \end{bmatrix}
-\]
+$$
 
 ## The Voltage Subvector ($\mathbf{V}$)
 
@@ -56,9 +58,9 @@ This sub-vector contains the primary unknowns: the potential difference (voltage
 
 - **Composition**:
 
-    $$
-    \mathbf{V} = \begin{bmatrix} V_{N1} \\ V_{N2} \\ \vdots \\ V_{N_n} \end{bmatrix}
-    $$
+$$
+\mathbf{V} = \begin{bmatrix} V_{N1} \\ V_{N2} \\ \vdots \\ V_{N_n} \end{bmatrix}
+$$
 
     where $N_n$ is the total number of non-ground nodes.
 
@@ -70,9 +72,9 @@ This sub-vector contains the currents through the components that required extra
 
 - **Composition**:
 
-    $$
-    \mathbf{I} = \begin{bmatrix} I_{V1} \\ I_{L1} \\ \vdots \\ I_{L_m} \end{bmatrix}
-    $$
+$$
+\mathbf{I} = \begin{bmatrix} I_{V1} \\ I_{L1} \\ \vdots \\ I_{L_m} \end{bmatrix}
+$$
 
     where $m$ is the total count of components that require a current variable—in your case, Voltage Sources and Inductors.
 
