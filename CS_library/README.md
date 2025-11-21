@@ -36,6 +36,37 @@ $$\mathbf{A} \mathbf{x} = \mathbf{z}$$
 |$\mathbf{x}$ (Solution Vector)|Contains all unknown voltages and currents.|Node voltages ($V_1, V_2, \dots$) and auxiliary currents ($I_{V_1}, I_{L_1}, \dots$)|
 |$\mathbf{z}$ (Source Vector)|Contains known independent sources.|Voltage source values and equivalent current source values.|
 
+# Introduction to MNA sovler Vectors
+
+The vector $\mathbf{x}$ is known as the Solution Vector. It contains every unknown quantity we are trying to find in the circuit. Since standard Nodal Analysis only solves for voltages, MNA adds extra rows (and corresponding columns) to the matrix to solve for crucial unknown currents.The full MNA solution vector $\mathbf{x}$ is always structured as two stacked sub-vectors:
+
+$$\mathbf{x} = \begin{bmatrix} \mathbf{V} \\ \mathbf{I} \end{bmatrix}$$
+
+## The Voltage Subvector ($\mathbf{V}$)
+
+This sub-vector contains the primary unknowns: the potential difference (voltage) at every non-ground node in the circuit.
+
+- **Definition**: The voltage at every named node (e.g., N1, N_mid, N_start) relative to the reference ground node (GND).
+
+- **Composition**:
+
+    $$\mathbf{V} = \begin{bmatrix} V_{N1} \\ V_{N2} \\ \vdots \\ V_{N_n} \end{bmatrix}$$
+
+    where $N_n$ is the total number of non-ground nodes.
+
+## The Auxiliary Current Subvector ($\mathbf{I}$)
+
+This sub-vector contains the currents through the components that required extra rows in the MNA matrix to be solved. These are often called auxiliary variables.
+
+- **Definition**: Currents that are not easily calculated via Ohm's Law (like the current through a resistor), but are necessary constraints in the MNA framework.
+
+- **Composition**:
+
+    $$\mathbf{I} = \begin{bmatrix} I_{V1} \\ I_{L1} \\ \vdots \\ I_{L_m} \end{bmatrix}$$
+
+    where $m$ is the total count of components that require a current variable—in your case, Voltage Sources and Inductors.
+
+- **Significance**: This allows the solver to determine the current flowing out of a Voltage Source (which is unknown) or the current flowing through an Inductor (which is an energy state variable).
 
 ### DC Analysis
 
