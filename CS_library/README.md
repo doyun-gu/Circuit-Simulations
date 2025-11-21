@@ -40,9 +40,13 @@ $$\mathbf{A} \mathbf{x} = \mathbf{z}$$
 
 The vector $\mathbf{x}$ is known as the Solution Vector. It contains every unknown quantity we are trying to find in the circuit. Since standard Nodal Analysis only solves for voltages, MNA adds extra rows (and corresponding columns) to the matrix to solve for crucial unknown currents.The full MNA solution vector $\mathbf{x}$ is always structured as two stacked sub-vectors:
 
-$$
-\mathbf{x} = \begin{bmatrix} \mathbf{V} \\ \mathbf{I} \end{bmatrix}
-$$
+\[
+\mathbf{x} =
+\begin{bmatrix}
+\mathbf{V} \\
+\mathbf{I}
+\end{bmatrix}
+\]
 
 ## The Voltage Subvector ($\mathbf{V}$)
 
