@@ -29,7 +29,7 @@ The library uses Modified Nodal Analysis (MNA) as its primary solution technique
 The entire circuit is converted into a linear system of equations of the form:
 
 $$
-\mathbf{Az}=\mathbf{z}
+\mathbf{A}\mathbf{x}=\mathbf{z}
 $$
 
 |Variable|Description|Components|
