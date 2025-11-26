@@ -42,8 +42,8 @@ $$
 x(t) = \Re\{ X e^{j\omega_0 t} \}.
 $$
 
-In this classical setting, both the magnitude \( |X| = \hat{X} \) and the
-angle \( \arg(X) = \phi \) are **independent of time**.
+In this classical setting, both the magnitude $|X| = \hat{X}$ and the
+angle $\arg(X) = \phi$ are **independent of time**.
 
 ---
 
@@ -70,15 +70,15 @@ where the coefficients \(X_k(t)\) change **slowly** with time and capture the
 envelope of each harmonic.
 
 The **instantaneous dynamic phasor** removes the explicit time-window
-averaging and instead defines a phasor \( \bar{X}(t) \) such that, for a
-real-valued signal \(x(t)\),
+averaging and instead defines a phasor $\bar{X}(t)$ such that, for a
+real-valued signal $x(t)$,
 
 $$
 x(t) = \Re\!\left\{ \bar{X}(t)\, e^{j \theta(t)} \right\},
 $$
 
-where \( \theta(t) \) is a prescribed reference angle (for example
-\( \theta(t) = \omega_0 t \) or a more general time-varying phase).  
+where $\theta(t)$ is a prescribed reference angle (for example
+$\theta(t) = \omega_0 t$ or a more general time-varying phase).  
 This representation is defined at every instant without integrating over a
 past period.
 
@@ -94,7 +94,7 @@ version of the instantaneous phasor.
 
 ### 1.3 Series RLC Circuit and MNA
 
-For a series RLC circuit driven by an input voltage \(u(t)\), the element
+For a series RLC circuit driven by an input voltage $u(t)$, the element
 relations are
 
 $$
