@@ -74,7 +74,7 @@ averaging and instead defines a phasor $\bar{X}(t)$ such that, for a
 real-valued signal $x(t)$,
 
 $$
-x(t) = \Re\left\{ \bar{X}(t)\, e^{j\theta(t)} \right\}
+x(t) = \Re\{\bar{X}(t)\, e^{j\theta(t)}\}
 $$
 
 where $\theta(t)$ is a prescribed reference angle (for example
