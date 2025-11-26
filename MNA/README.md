@@ -24,16 +24,20 @@ It currently contains two reports:
 ### 1.1 Steady-State Phasor
 
 For a sinusoidal signal with constant amplitude and phase
+
 $$
 x(t) = \hat{X} \cos(\omega_0 t + \phi),
 $$
+
 the steady-state phasor is the complex constant
+
 $$
 X = \hat{X} e^{j\phi}.
 $$
 
 Using this definition, the time-domain signal can be written as the real part
 of a rotating phasor:
+
 $$
 x(t) = \Re\{ X e^{j\omega_0 t} \}.
 $$
@@ -50,24 +54,29 @@ extends the idea of a phasor.
 
 The **classical dynamic phasor** of harmonic index \(k\) is defined as a
 period-averaged Fourier coefficient over one fundamental period \(T_0\):
+
 $$
 X_k(t) = \frac{1}{T_0} \int_{t-T_0}^{t} x(\tau)\, e^{-j k \omega_0 \tau}\, d\tau ,
 \qquad T_0 = \frac{2\pi}{\omega_0}.
 $$
 
 The original signal can then be approximated as
+
 $$
 x(t) \approx \sum_{k=-K}^{K} X_k(t)\, e^{j k \omega_0 t},
 $$
+
 where the coefficients \(X_k(t)\) change **slowly** with time and capture the
 envelope of each harmonic.
 
 The **instantaneous dynamic phasor** removes the explicit time-window
 averaging and instead defines a phasor \( \bar{X}(t) \) such that, for a
 real-valued signal \(x(t)\),
+
 $$
 x(t) = \Re\!\left\{ \bar{X}(t)\, e^{j \theta(t)} \right\},
 $$
+
 where \( \theta(t) \) is a prescribed reference angle (for example
 \( \theta(t) = \omega_0 t \) or a more general time-varying phase).  
 This representation is defined at every instant without integrating over a
@@ -87,6 +96,7 @@ version of the instantaneous phasor.
 
 For a series RLC circuit driven by an input voltage \(u(t)\), the element
 relations are
+
 $$
 v_R(t) = R\, i_L(t), \qquad
 v_L(t) = L\, \frac{di_L(t)}{dt}, \qquad
@@ -94,18 +104,22 @@ i_C(t) = C\, \frac{dv_C(t)}{dt}.
 $$
 
 In the Laplace domain, the impedances are
+
 $$
 Z_R = R, \qquad
 Z_L = sL, \qquad
 Z_C = \frac{1}{sC},
 $$
+
 and the transfer function (gain) from input voltage to capacitor voltage is
+
 $$
 G(s) = \frac{V_C(s)}{U(s)} =
 \frac{1}{LC s^2 + RC s + 1}.
 $$
 
 In the time domain, this leads to the second-order differential equation
+
 $$
 LC\, \frac{d^2 v_C(t)}{dt^2}
 + RC\, \frac{dv_C(t)}{dt}
@@ -113,6 +127,7 @@ LC\, \frac{d^2 v_C(t)}{dt^2}
 $$
 
 By defining the state vector
+
 $$
 \mathbf{x}(t) =
 \begin{bmatrix}
@@ -120,13 +135,17 @@ i_L(t) \\
 v_C(t)
 \end{bmatrix},
 $$
+
 the dynamics can be written in standard state-space (matrix differential
 equation) form:
+
 $$
 \dot{\mathbf{x}}(t) = A \mathbf{x}(t) + B u(t), \qquad
 y(t) = C \mathbf{x}(t),
 $$
+
 with
+
 $$
 A =
 \begin{bmatrix}
@@ -145,10 +164,12 @@ $$
 
 In **Modified Nodal Analysis (MNA)**, more general circuits are written in the
 compact matrix form
+
 $$
 G\, \mathbf{v}(t) + C\, \frac{d\mathbf{v}(t)}{dt} = \mathbf{i}_\text{source}(t),
 $$
-where \( \mathbf{v}(t) \) collects node voltages and selected branch currents.
+
+where $\mathbf{v}(t)$ collects node voltages and selected branch currents.
 Report 2 derives such equations for an RLC circuit (with and without
 switching elements) and integrates them in time using a trapezoidal rule,
 similar to how industrial tools such as EMT-type and PSCAD-type simulators
