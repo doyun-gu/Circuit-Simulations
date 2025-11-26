@@ -195,9 +195,9 @@ Input is the source voltage \(u(t)\); output is the capacitor voltage
 
 ![Phi2 circuit](fig/phi2_circuit.png)
 
-In ϕ₂ an additional switching element \(S(t)\) (or a diode) is inserted in the
-RLC path. The input is still \(u(t)\) and the output is the same node
-voltage \(y(t) = v_C(t)\), but the topology changes when the switch
+In ϕ₂ an additional switching element $S(t)$ (or a diode) is inserted in the
+RLC path. The input is still $u(t)$ and the output is the same node
+voltage $y(t) = v_C(t)$, but the topology changes when the switch
 turns on or off, leading to strongly time-varying, non-sinusoidal
 waveforms.
 
