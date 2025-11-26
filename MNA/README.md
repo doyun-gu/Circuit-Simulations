@@ -66,7 +66,7 @@ $$
 x(t) \approx \sum_{k=-K}^{K} X_k(t)\, e^{j k \omega_0 t},
 $$
 
-where the coefficients \(X_k(t)\) change **slowly** with time and capture the
+where the coefficients $X_k(t)$ change **slowly** with time and capture the
 envelope of each harmonic.
 
 The **instantaneous dynamic phasor** removes the explicit time-window
@@ -74,7 +74,7 @@ averaging and instead defines a phasor $\bar{X}(t)$ such that, for a
 real-valued signal $x(t)$,
 
 $$
-x(t) = \Re\!\left\{ \bar{X}(t)\, e^{j \theta(t)} \right\},
+x(t) = \Re\left\{ \bar{X}(t)\, e^{j\theta(t)} \right\}
 $$
 
 where $\theta(t)$ is a prescribed reference angle (for example
