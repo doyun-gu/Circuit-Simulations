@@ -2,20 +2,27 @@
 
 last reviewed at 26 November, 2025
 
-This folder collects small studies on how electrical circuits can be modeled
-and simulated using **dynamic phasors** and **matrix differential equations**.
-It currently contains two reports:
+This folder collects small studies on how a benchmark RLC network can be
+modeled and simulated using **dynamic phasors** and **matrix differential
+equations**.  The same base circuit is analysed in two different operating
+scenarios:
 
-- **Report 1 – Dynamic Phasors: Instantaneous vs Classical**  
-  A scalar example is used to compare the *classical* (period-averaged)
-  dynamic phasor with the *instantaneous* dynamic phasor, and to illustrate
-  their advantages and limitations.
+- **Report 1 – ϕ₁: Linear RLC Network (No Switching)**  
+  The RLC network is treated as a purely linear circuit.  
+  Modified Nodal Analysis (MNA) is used to derive matrix differential
+  equations, and the time-domain response is obtained with a trapezoidal
+  integrator.  Classical phasor and dynamic phasor representations are
+  discussed under the assumption of slowly varying, almost-sinusoidal
+  waveforms.
 
-- **Report 2 – Matrix Differential Equation and Time-Domain Simulation of a Series RLC Circuit**  
-  A series RLC circuit is modeled using **Modified Nodal Analysis (MNA)** and
-  simulated in the time domain with a trapezoidal integrator. The link
-  between transfer functions, state-space models and MNA is discussed, and
-  the impact of switches/diodes on sinusoidal behaviour is highlighted.
+- **Report 2 – ϕ₂: RLC Network with Switching / Diode**  
+  The same network is extended with a switching element (e.g. a diode or an
+  ideal switch), so that the topology changes in time.  
+  The MNA formulation is updated for the different switching states and
+  time-domain simulations are used to study the resulting non-sinusoidal
+  waveforms.  The limitations of dynamic phasor descriptions in the presence
+  of strong switching and non-linearities are highlighted, and the relation
+  to EMT/PSCAD-type simulations is discussed.
 
 ---
 
@@ -179,13 +186,16 @@ operate.
 
 ## 2. Repository Structure
 
-- `report1_dynamic_phasor.pdf`  
-  – First report: dynamic phasor theory and scalar simulations.
+- `report_phi1_linear_rlc.pdf`  
+  – Report 1 (ϕ₁): linear RLC network, MNA formulation, time-domain
+    simulation and dynamic phasor interpretation under slowly varying,
+    near-sinusoidal conditions.
 
-- `report2_rlc_mna.pdf`  
-  – Second report: MNA, matrix differential equations and time-domain
-    simulation of a series RLC circuit (including step and sinusoidal
-    responses, and a discussion of switching elements).
+- `report_phi2_rlc_with_switch.pdf`  
+  – Report 2 (ϕ₂): same RLC network with a switching element or diode,
+    topology changes in time, non-sinusoidal waveforms, and a discussion of
+    the limitations of dynamic phasors compared with EMT/PSCAD-style
+    time-domain simulation.
 
 - `notebooks/`  
   – Jupyter notebooks used to generate the figures and numerical results.
@@ -213,7 +223,8 @@ Most examples are implemented in Python using NumPy and Matplotlib.
     python python/rlc_step_response.py
     ```
 
-## References
+## 3. References
+
 The work in this folder is mainly based on:
 
 - F. N. Najm, Circuit Simulation. Hoboken, NJ, USA: John Wiley & Sons, 2010.
