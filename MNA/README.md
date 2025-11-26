@@ -128,9 +128,7 @@ $$
 In the time domain, this leads to the second-order differential equation
 
 $$
-LC\, \frac{d^2 v_C(t)}{dt^2}
-+ RC\, \frac{dv_C(t)}{dt}
-+ v_C(t) = u(t).
+LC\, \frac{d^2 v_C(t)}{dt^2} + RC\, \frac{dv_C(t)}{dt} + v_C(t) = u(t).
 $$
 
 By defining the state vector
