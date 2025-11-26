@@ -128,7 +128,7 @@ $$
 In the time domain, this leads to the second-order differential equation
 
 $$
-LC\, \qquad \frac{d^2 v_C(t)}{dt^2} + RC\, \frac{dv_C(t)}{dt} + v_C(t) = u(t).
+LC\, \frac{d^2 v_C(t)}{dt^2} + RC\, \frac{dv_C(t)}{dt} + v_C(t) = u(t).
 $$
 
 By defining the state vector
@@ -179,6 +179,28 @@ Report 2 derives such equations for an RLC circuit (with and without
 switching elements) and integrates them in time using a trapezoidal rule,
 similar to how industrial tools such as EMT-type and PSCAD-type simulators
 operate.
+
+### 1.4 Benchmark circuits ϕ₁ and ϕ₂
+
+The same base RLC network is used in two operating scenarios.
+
+**ϕ₁ – Linear RLC network**
+
+![Phi1 circuit](Assets/phi1_circuit.png)
+
+Input is the source voltage \(u(t)\); output is the capacitor voltage
+\(y(t) = v_C(t)\).
+
+**ϕ₂ – RLC network with switch / diode**
+
+![Phi2 circuit](Assets/phi2_circuit.png)
+
+In ϕ₂ an additional switching element \(S(t)\) (or a diode) is inserted in the
+RLC path. The input is still \(u(t)\) and the output is the same node
+voltage \(y(t) = v_C(t)\), but the topology changes when the switch
+turns on or off, leading to strongly time-varying, non-sinusoidal
+waveforms.
+
 
 ---
 
