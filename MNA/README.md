@@ -186,14 +186,18 @@ The same base RLC network is used in two operating scenarios.
 
 **ϕ₁ – Linear RLC network**
 
-![Phi1 circuit](fig/phi1_circuit.png)
+<p align="center">
+  <img src="figs/phi1_circuit.png" alt="phi1 circuit" width="420">
+</p>
 
-Input is the source voltage \(u(t)\); output is the capacitor voltage
-\(y(t) = v_C(t)\).
+Input is the source voltage $u(t)$; output is the capacitor voltage
+$y(t) = v_C(t)$.
 
 **ϕ₂ – RLC network with switch / diode**
 
-![Phi2 circuit](fig/phi2_circuit.png)
+<p align="center">
+  <img src="figs/phi2_circuit.png" alt="phi2 circuit" width="420">
+</p>
 
 In ϕ₂ an additional switching element $S(t)$ (or a diode) is inserted in the
 RLC path. The input is still $u(t)$ and the output is the same node
