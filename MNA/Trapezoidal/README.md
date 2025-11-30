@@ -107,7 +107,7 @@ $$
 
 we can compare:
 
-- exact ($F(t)$),
+- exact ( $F(t)$),
 - rectangle approximation,
 - trapezoidal approximation.
 
@@ -239,6 +239,7 @@ $$
 This can be written in matrix form:
 
 $$
+
 \frac{d}{dt}
 \begin{bmatrix}
 i_L \\ v_C
@@ -253,6 +254,7 @@ A =
 - R/L & -1/L \\
 1/C   &  0
 \end{bmatrix}.
+
 $$
 
 We simulate with:
