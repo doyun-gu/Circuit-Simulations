@@ -240,7 +240,7 @@ This can be written in matrix form:
 
 
 $$
-\frac{d}{dt} \begin{bmatrix} i_L \\ v_C \end{bmatrix}=A\begin{bmatrix}i_L \\ v_C\end{bmatrix}, \quadA =\begin{bmatrix}- R/L & -1/L \\1/C   &  0\end{bmatrix}.
+\frac{d}{dt} \begin{bmatrix} i_L \\ v_C \end{bmatrix}=A\begin{bmatrix}i_L \\ v_C\end{bmatrix}, \qquad =\begin{bmatrix}- R/L & -1/L \\1/C   &  0\end{bmatrix}.
 $$
 
 
@@ -319,14 +319,7 @@ Rearranging:
 
 
 $$
-\underbrace{\left(
-\frac{\mathbf{C}}{h} + \frac{1}{2}\mathbf{G}
-\right)}_{\mathbf{A}}
-\mathbf{x}_{n+1}
-=
-\underbrace{\left(
-\frac{\mathbf{C}}{h} - \frac{1}{2}\mathbf{G}
-\right)\mathbf{x}_n + \frac{1}{2}(\mathbf{b}_{n+1} + \mathbf{b}_n)}_{\mathbf{z}}.
+\underbrace{\left(\frac{\mathbf{C}}{h} + \frac{1}{2}\mathbf{G}\right)}_{\mathbf{A}}\mathbf{x}_{n+1}=\underbrace{\left(\frac{\mathbf{C}}{h} - \frac{1}{2}\mathbf{G}\right)\mathbf{x}_n + \frac{1}{2}(\mathbf{b}_{n+1} + \mathbf{b}_n)}_{\mathbf{z}}.
 $$
 
 
