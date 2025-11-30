@@ -267,21 +267,21 @@ For a linear system ($x' = A x$), the step matrices are:
 
 - Explicit Euler:  
   
-  $$
-  x_{n+1} = (I + hA) x_n.
-  $$
+$$
+x_{n+1} = (I + hA) x_n.
+$$
 
 - Backward Euler:  
   
-  $$
-  x_{n+1} = (I - hA)^{-1} x_n.
-  $$
+$$
+x_{n+1} = (I - hA)^{-1} x_n.
+$$
 
 - Trapezoidal:  
   
-  $$
-  x_{n+1} = (I - \tfrac{h}{2}A)^{-1} (I + \tfrac{h}{2}A) x_n.
-  $$
+$$
+x_{n+1} = (I - \tfrac{h}{2}A)^{-1} (I + \tfrac{h}{2}A) x_n.
+$$
 
 The reference solution is obtained with a **much smaller** time step using
 trapezoidal (essentially “ground truth” EMT).
