@@ -238,6 +238,7 @@ $$
 
 This can be written in matrix form:
 
+
 $$
 \frac{d}{dt}
 \begin{bmatrix}
@@ -254,6 +255,7 @@ A =
 1/C   &  0
 \end{bmatrix}.
 $$
+
 
 We simulate with:
 
