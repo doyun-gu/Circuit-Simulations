@@ -226,7 +226,7 @@ $$
 \mathbf{x} = \begin{bmatrix} i_L \\ v_C \end{bmatrix}.
 $$
 
-Dynamics:![alt text](image.png)
+Dynamics:
 
 $$
 L \frac{di_L}{dt} + R i_L + v_C = 0, \qquad
