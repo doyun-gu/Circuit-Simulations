@@ -33,7 +33,7 @@ methods like the rectangle rule or explicit Euler.
 
 ### 1.1. The problem
 
-Given a smooth function ($f(t)$), we want to approximate the integral
+Given a smooth function $(f(t))$, we want to approximate the integral
 
 $$
 \int_{t_0}^{t_N} f(t)\,dt
@@ -41,7 +41,7 @@ $$
 
 using only a finite number of samples.
 
-We split the interval into ($N$) steps of size ($h$):
+We split the interval into $(N)$ steps of size ($h$):
 
 $$
 t_n = t_0 + n h,\quad n=0,\ldots, N,\quad h = \frac{t_N - t_0}{N}.
@@ -49,7 +49,7 @@ $$
 
 ### 1.2. Rectangle rule (left Riemann sum)
 
-For each sub-interval ($[t_n, t_{n+1}]$), we approximate the area by a **rectangle**
+For each sub-interval $([t_n, t_{n+1}])$, we approximate the area by a **rectangle**
 using the left endpoint:
 
 $$
@@ -107,7 +107,7 @@ $$
 
 we can compare:
 
-- exact ( $F(t)$),
+- exact $(F(t))$,
 - rectangle approximation,
 - trapezoidal approximation.
 
@@ -118,7 +118,7 @@ while the rectangle curve visibly deviates.
 
 ---
 
-## 2. ODE example: ($ x' = -x $)
+## 2. ODE example: $(x' = -x)$
 
 To see how this feeds into **ODE time stepping**, consider:
 
@@ -132,7 +132,7 @@ $$
 x(t) = e^{-t}.
 $$
 
-We integrate from ($t=0$) to ($t=5$) with a relatively coarse step ($h = 0.5$).
+We integrate from $(t=0)$ to $(t=5)$ with a relatively coarse step $(h = 0.5)$.
 
 ### 2.1. Explicit Euler
 
@@ -144,7 +144,7 @@ x_{n+1} = x_n + h\, f(t_n, x_n)
         = (1 - h)\,x_n.
 $$
 
-With \(h=0.5\), this becomes:
+With $(h=0.5)$, this becomes:
 
 $$
 x_{n+1} = 0.5\,x_n.
@@ -161,7 +161,7 @@ x_{n+1} = x_n + h\, f(t_{n+1}, x_{n+1})
         = x_n - h\,x_{n+1}.
 $$
 
-Solving for ($x_{n+1}$):
+Solving for $(x_{n+1})$:
 
 $$
 x_{n+1} = \frac{x_n}{1 + h}.
@@ -201,8 +201,8 @@ x_{n+1}
 = \frac{1 - h/2}{1 + h/2} x_n.
 $$
 
-This factor is much closer to the true decay \(e^{-h}\) and gives a very good
-approximation even for coarse \(h\).
+This factor is much closer to the true decay $(e^{-h})$ and gives a very good
+approximation even for coarse $(h)$.
 
 **Comparison of the three methods to the exact solution:**
 
@@ -243,11 +243,11 @@ $$
 
 We simulate with:
 
-- initial condition: ($i_L(0) = 0 $), ($v_C(0) = 1$) (charged capacitor),
-- a relatively coarse time step ($\Delta t$),
+- initial condition: $(i_L(0) = 0)$, $(v_C(0) = 1)$ (charged capacitor),
+- a relatively coarse time step $(\Delta t)$,
 - different integrators.
 
-For a linear system ($x' = A x$), the step matrices are:
+For a linear system $(x' = A x)$, the step matrices are:
 
 - Explicit Euler:  
   
@@ -299,10 +299,10 @@ $$
 
 where:
 
-- ( $\mathbf{x}(t)$) = vector of node voltages and some branch currents,
-- ( $\mathbf{C}$) = capacitance/inductance-related terms,
-- ( $\mathbf{G}$) = conductances and static elements,
-- ( $\mathbf{b}(t)$) = sources.
+- $(\mathbf{x}(t))$ = vector of node voltages and some branch currents,
+- $(\mathbf{C})$ = capacitance/inductance-related terms,
+- $(\mathbf{G})$ = conductances and static elements,
+- $(\mathbf{b}(t))$ = sources.
 
 Applying the trapezoidal integrator with step ($h$) gives, at each time step:
 
