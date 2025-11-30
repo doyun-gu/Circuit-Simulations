@@ -302,10 +302,10 @@ $$
 
 where:
 
-- ($\mathbf{x}(t)$) = vector of node voltages and some branch currents,
-- ($\mathbf{C}$) = capacitance/inductance-related terms,
-- ($\mathbf{G}$) = conductances and static elements,
-- ($\mathbf{b}(t)$) = sources.
+- ( $\mathbf{x}(t)$) = vector of node voltages and some branch currents,
+- ( $\mathbf{C}$) = capacitance/inductance-related terms,
+- ( $\mathbf{G}$) = conductances and static elements,
+- ( $\mathbf{b}(t)$) = sources.
 
 Applying the trapezoidal integrator with step ($h$) gives, at each time step:
 
