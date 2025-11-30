@@ -240,20 +240,7 @@ This can be written in matrix form:
 
 
 $$
-\frac{d}{dt}
-\begin{bmatrix}
-i_L \\ v_C
-\end{bmatrix}
-=
-A
-\begin{bmatrix}
-i_L \\ v_C
-\end{bmatrix}, \quad
-A =
-\begin{bmatrix}
-- R/L & -1/L \\
-1/C   &  0
-\end{bmatrix}.
+\frac{d}{dt} \begin{bmatrix} i_L \\ v_C \end{bmatrix}=A\begin{bmatrix}i_L \\ v_C\end{bmatrix}, \quadA =\begin{bmatrix}- R/L & -1/L \\1/C   &  0\end{bmatrix}.
 $$
 
 
@@ -315,20 +302,16 @@ $$
 
 where:
 
-- ($ \mathbf{x}(t) $) = vector of node voltages and some branch currents,
-- ($ \mathbf{C}$) = capacitance/inductance-related terms,
-- ($ \mathbf{G}$) = conductances and static elements,
-- ($ \mathbf{b}(t)$) = sources.
+- ($\mathbf{x}(t)$) = vector of node voltages and some branch currents,
+- ($\mathbf{C}$) = capacitance/inductance-related terms,
+- ($\mathbf{G}$) = conductances and static elements,
+- ($\mathbf{b}(t)$) = sources.
 
 Applying the trapezoidal integrator with step ($h$) gives, at each time step:
 
 
 $$
-\mathbf{C} \frac{\mathbf{x}_{n+1} - \mathbf{x}_n}{h}
-+
-\frac{1}{2} \mathbf{G} (\mathbf{x}_{n+1} + \mathbf{x}_n)
-=
-\frac{1}{2}(\mathbf{b}_{n+1} + \mathbf{b}_n).
+\mathbf{C} \frac{\mathbf{x}_{n+1} - \mathbf{x}_n}{h}+\frac{1}{2} \mathbf{G} (\mathbf{x}_{n+1} + \mathbf{x}_n)=\frac{1}{2}(\mathbf{b}_{n+1} + \mathbf{b}_n).
 $$
 
 
@@ -343,9 +326,7 @@ $$
 =
 \underbrace{\left(
 \frac{\mathbf{C}}{h} - \frac{1}{2}\mathbf{G}
-\right)\mathbf{x}_n
-+
-\frac{1}{2}(\mathbf{b}_{n+1} + \mathbf{b}_n)}_{\mathbf{z}}.
+\right)\mathbf{x}_n + \frac{1}{2}(\mathbf{b}_{n+1} + \mathbf{b}_n)}_{\mathbf{z}}.
 $$
 
 
