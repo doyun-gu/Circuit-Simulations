@@ -223,10 +223,7 @@ and initial energy in the capacitor.
 State vector:
 
 $$
-\mathbf{x} =
-\begin{bmatrix}
-i_L \\ v_C
-\end{bmatrix}.
+\mathbf{x} = \begin{bmatrix} i_L \\ v_C \end{bmatrix}.
 $$
 
 Dynamics:![alt text](image.png)
