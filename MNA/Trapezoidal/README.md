@@ -10,7 +10,7 @@ methods like the rectangle rule or explicit Euler.
 
 - `compare_integrators.py`  
   ODE example: compares Explicit Euler, Backward Euler, and Trapezoidal for  
-  ($ x' = -x $), ($ x(0) = 1 $).
+  ($x' = -x $), ($x(0) = 1 $).
 
 - `rlc_integrator_comparison.py`  
   Series RLC circuit example: compares the same integrators for an LC oscillation.
