@@ -33,7 +33,7 @@ methods like the rectangle rule or explicit Euler.
 
 ### 1.1. The problem
 
-Given a smooth function ($ f(t) $), we want to approximate the integral
+Given a smooth function ($f(t)$), we want to approximate the integral
 
 $$
 \int_{t_0}^{t_N} f(t)\,dt
@@ -41,7 +41,7 @@ $$
 
 using only a finite number of samples.
 
-We split the interval into ($N$) steps of size ($ h $):
+We split the interval into ($N$) steps of size ($h$):
 
 $$
 t_n = t_0 + n h,\quad n=0,\ldots, N,\quad h = \frac{t_N - t_0}{N}.
@@ -161,7 +161,7 @@ x_{n+1} = x_n + h\, f(t_{n+1}, x_{n+1})
         = x_n - h\,x_{n+1}.
 $$
 
-Solving for \(x_{n+1}\):
+Solving for ($x_{n+1}$):
 
 $$
 x_{n+1} = \frac{x_n}{1 + h}.
@@ -184,7 +184,7 @@ x_{n+1}
 = x_n + \frac{h}{2}\big[f(t_n,x_n) + f(t_{n+1}, x_{n+1})\big].
 $$
 
-For \(x'=-x\):
+For ($x'=-x$):
 
 $$
 x_{n+1}
@@ -257,23 +257,26 @@ $$
 
 We simulate with:
 
-- initial condition: ($ i_L(0) = 0 $), ($ v_C(0) = 1 $) (charged capacitor),
-- a relatively coarse time step ($ \Delta t $),
+- initial condition: ($i_L(0) = 0 $), ($v_C(0) = 1$) (charged capacitor),
+- a relatively coarse time step ($\Delta t$),
 - different integrators.
 
 For a linear system ($x' = A x$), the step matrices are:
 
 - Explicit Euler:  
+  
   $$
   x_{n+1} = (I + hA) x_n.
   $$
 
 - Backward Euler:  
+  
   $$
   x_{n+1} = (I - hA)^{-1} x_n.
   $$
 
 - Trapezoidal:  
+  
   $$
   x_{n+1} = (I - \tfrac{h}{2}A)^{-1} (I + \tfrac{h}{2}A) x_n.
   $$
@@ -283,7 +286,7 @@ trapezoidal (essentially “ground truth” EMT).
 
 ### 3.1. Capacitor voltage
 
-![v_C(t) with different integrators](figs/v_Ct_integrators.png)
+![v_C(t) with different integrators](figs/v_ct_integrators.png)
 
 - Reference (fine dt, trapezoidal): smooth oscillation with moderate damping.
 - Explicit Euler: may distort the oscillation and can become unstable for stiffer cases.
@@ -292,7 +295,7 @@ trapezoidal (essentially “ground truth” EMT).
 
 ### 3.2. Inductor current
 
-![i_L(t) with different integrators](figs/i_Lt_integrators.png)
+![i_L(t) with different integrators](figs/i_lt_integrators.png)
 
 The same conclusions hold for the inductor current: trapezoidal with a relatively
 large step still tracks the reference well, while explicit Euler and backward Euler
@@ -317,6 +320,7 @@ where:
 
 Applying the trapezoidal integrator with step ($h$) gives, at each time step:
 
+
 $$
 \mathbf{C} \frac{\mathbf{x}_{n+1} - \mathbf{x}_n}{h}
 +
@@ -325,7 +329,9 @@ $$
 \frac{1}{2}(\mathbf{b}_{n+1} + \mathbf{b}_n).
 $$
 
+
 Rearranging:
+
 
 $$
 \underbrace{\left(
@@ -339,6 +345,7 @@ $$
 +
 \frac{1}{2}(\mathbf{b}_{n+1} + \mathbf{b}_n)}_{\mathbf{z}}.
 $$
+
 
 So every time step is just solving a linear system
 
