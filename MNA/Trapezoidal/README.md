@@ -208,7 +208,7 @@ approximation even for coarse \(h\).
 
 ![Integration methods on x' = -x](figs/integration_comparison1.png)
 
-- Blue: exact solution \(x(t) = e^{-t}\)
+- Blue: exact solution ($x(t) = e^{-t}$)
 - Dots: Explicit Euler (decays too fast)
 - Squares: Backward Euler (decays too slowly)
 - Triangles: Trapezoidal (almost on top of exact)
@@ -229,7 +229,7 @@ i_L \\ v_C
 \end{bmatrix}.
 $$
 
-Dynamics:
+Dynamics:![alt text](image.png)
 
 $$
 L \frac{di_L}{dt} + R i_L + v_C = 0, \qquad
