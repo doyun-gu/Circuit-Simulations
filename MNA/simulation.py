@@ -45,6 +45,8 @@ def generate_signal(case_name, t, f0=50.0):
         desc = "Case 1: Pure sinusoid (constant amplitude)"
     
     elif case_name == "slow_amplitude":
+        #TODO: Fix A 
+        #!-> should not be t-1!!
         # Amplitude slowly ramps from 1 to 2 over the full simulation
         A = 1.0 + t / t[-1]  # from 1 to 2
         x = A * np.sin(omega0 * t)
