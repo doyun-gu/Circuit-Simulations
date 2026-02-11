@@ -1,0 +1,50 @@
+* Rim et al. (2025) RLC Circuit - Frequency Sweep
+* Tests framework at multiple frequencies for comprehensive validation
+*
+* This netlist sweeps the source frequency from 50 kHz to 200 kHz
+* to validate framework performance across the frequency range.
+
+* ────────────────────────────────────────────────────────────
+* PARAMETERS
+* ────────────────────────────────────────────────────────────
+
+* Component values (Table II)
+.param Lval=100.04u
+.param Cval=30.07n
+.param Rs=3.0
+.param Ro=2k
+
+* Source frequency (will be swept)
+.param freq=92.3k
+
+* Resonant frequency for reference
+.param fres={1/(2*pi*sqrt(Lval*Cval))}
+
+* ────────────────────────────────────────────────────────────
+* CIRCUIT
+* ────────────────────────────────────────────────────────────
+
+V1 N001 0 SINE(0 1 {freq})
+R1 N001 N002 {Rs}
+L1 N002 N003 {Lval}
+C1 N003 0 {Cval}
+R2 N003 0 {Ro}
+
+* ────────────────────────────────────────────────────────────
+* SIMULATION COMMANDS
+* ────────────────────────────────────────────────────────────
+
+* Frequency sweep: 50k, 70k, 92.3k (resonance), 120k, 150k, 200k
+.step param freq list 50k 70k 92.3k 120k 150k 200k
+
+* Transient analysis (need enough cycles at lowest frequency)
+.tran 0 0.5m 0 1u
+
+* Save all signals
+.save all
+
+* Measurements
+.meas TRAN Vpeak MAX V(N003)
+.meas TRAN Ipeak MAX I(L1)
+
+.end

@@ -1,0 +1,62 @@
+{
+  "algorithm": "Event-Driven Adaptive Hybrid",
+  "description": "Uses averaging by default, switches to instantaneous only during detected events",
+  "configuration": {
+    "di_dt_threshold": 500000.0,
+    "dv_dt_threshold": 5000000.0,
+    "envelope_change_threshold": 0.03,
+    "startup_window_us": 50.0,
+    "post_event_window_us": 100.0,
+    "averaging_cost_ratio": 0.3
+  },
+  "results": {
+    "step": {
+      "scenario": "Step Response",
+      "metrics": {
+        "events_detected": 2451,
+        "mode_switches": 0,
+        "instantaneous_fraction": 1.0,
+        "total_cost": 1.0,
+        "cost_savings": 0.0
+      },
+      "errors": {
+        "mean_error_instantaneous": 0.029402308257076227,
+        "mean_error_averaging": 0.02940243776831916,
+        "mean_error_hybrid": 0.029402308257076227,
+        "max_error_hybrid": 0.030660107375830588
+      }
+    },
+    "multi_step": {
+      "scenario": "Multi-Step Response",
+      "metrics": {
+        "events_detected": 2505,
+        "mode_switches": 0,
+        "instantaneous_fraction": 1.0,
+        "total_cost": 1.0,
+        "cost_savings": 0.0
+      },
+      "errors": {
+        "mean_error_instantaneous": 0.0219805196719086,
+        "mean_error_averaging": 0.021979867273925726,
+        "mean_error_hybrid": 0.0219805196719086,
+        "max_error_hybrid": 0.030665884215958117
+      }
+    },
+    "load_switching": {
+      "scenario": "Load Switching",
+      "metrics": {
+        "events_detected": 2458,
+        "mode_switches": 0,
+        "instantaneous_fraction": 1.0,
+        "total_cost": 1.0,
+        "cost_savings": 0.0
+      },
+      "errors": {
+        "mean_error_instantaneous": 0.027600802010880505,
+        "mean_error_averaging": 0.02760210483887589,
+        "mean_error_hybrid": 0.027600802010880505,
+        "max_error_hybrid": 0.030435776490231423
+      }
+    }
+  }
+}

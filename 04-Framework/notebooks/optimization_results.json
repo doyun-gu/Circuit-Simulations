@@ -1,0 +1,99 @@
+{
+  "optimization_date": "2026-02-03T20:50:03.033126",
+  "dataset_size": 30000,
+  "frequencies_tested": [
+    500000.0,
+    550000.0,
+    580000.0,
+    620000.0,
+    650000.0,
+    700000.0
+  ],
+  "best_strategy": "Always Instantaneous",
+  "optimal_thresholds": {
+    "time_threshold_us": 1000000.0,
+    "di_dt_threshold": 0,
+    "dv_dt_threshold": 0,
+    "d2i_dt2_threshold": 0,
+    "envelope_threshold": 0
+  },
+  "performance": {
+    "accuracy": 1.0,
+    "comp_cost": 1.0,
+    "efficiency_score": 1.0
+  },
+  "all_results": [
+    {
+      "Strategy": "Always Instantaneous",
+      "Total Error": 0.00041553235318284287,
+      "Accuracy [%]": 100.0,
+      "Inst Usage [%]": 100.0,
+      "Comp Cost": 1.0,
+      "Switches": 0,
+      "Efficiency Score": 1.0
+    },
+    {
+      "Strategy": "Always Averaging",
+      "Total Error": 0.46771493939186365,
+      "Accuracy [%]": 0.0,
+      "Inst Usage [%]": 0.0,
+      "Comp Cost": 0.3,
+      "Switches": 0,
+      "Efficiency Score": 0.0
+    },
+    {
+      "Strategy": "Default Heuristic",
+      "Total Error": 0.09583249436602179,
+      "Accuracy [%]": 71.17,
+      "Inst Usage [%]": 71.17,
+      "Comp Cost": 0.79819,
+      "Switches": 349,
+      "Efficiency Score": 0.8916423407960511
+    },
+    {
+      "Strategy": "Diff. Evolution",
+      "Total Error": 0.00041553235318284287,
+      "Accuracy [%]": 100.0,
+      "Inst Usage [%]": 100.0,
+      "Comp Cost": 1.0,
+      "Switches": 0,
+      "Efficiency Score": 1.0
+    },
+    {
+      "Strategy": "RL Optimized",
+      "Total Error": 0.00395202824808539,
+      "Accuracy [%]": 96.34,
+      "Inst Usage [%]": 96.34,
+      "Comp Cost": 0.97438,
+      "Switches": 149,
+      "Efficiency Score": 0.9887312957983538
+    },
+    {
+      "Strategy": "Pareto (Low Cost)",
+      "Total Error": 0.34079649645565535,
+      "Accuracy [%]": 20.57333333333333,
+      "Inst Usage [%]": 20.57333333333333,
+      "Comp Cost": 0.4440133333333333,
+      "Switches": 467,
+      "Efficiency Score": 0.4633494489654965
+    },
+    {
+      "Strategy": "Pareto (Balanced)",
+      "Total Error": 0.04924109064976837,
+      "Accuracy [%]": 84.06333333333333,
+      "Inst Usage [%]": 84.06333333333333,
+      "Comp Cost": 0.8884433333333334,
+      "Switches": 297,
+      "Efficiency Score": 0.9461867761215309
+    },
+    {
+      "Strategy": "Pareto (Low Error)",
+      "Total Error": 0.0005126643447438685,
+      "Accuracy [%]": 99.90333333333334,
+      "Inst Usage [%]": 99.90333333333334,
+      "Comp Cost": 0.9993233333333333,
+      "Switches": 7,
+      "Efficiency Score": 0.9997098036337921
+    }
+  ]
+}

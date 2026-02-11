@@ -1,0 +1,41 @@
+* Rim et al. (2025) Series RLC Resonant Circuit
+* Table II Parameters for LTspice Validation
+*
+* This netlist can be opened directly in LTspice and simulated.
+* Results can then be compared with the Dynamic Phasor Framework.
+*
+* Circuit Topology:
+*   V1 → R1 (Rs) → L1 → [C1 ∥ R2 (Ro)] → GND
+*
+* Parameters:
+*   L  = 100.04 µH    (Series inductance)
+*   C  = 30.07 nF     (Parallel capacitance)
+*   Rs = 3.0 Ω        (Series resistance, includes inverter)
+*   Ro = 2.00 kΩ      (Load resistance)
+*   fr = 91.76 kHz    (Resonant frequency)
+*   fs = 92.3 kHz     (Source frequency)
+*   Q  = 19.2         (Quality factor)
+
+* Voltage source: 1V amplitude, 92.3 kHz sine wave
+V1 N001 0 SINE(0 1 92.3k)
+
+* Series resistance (includes inverter internal resistance)
+R1 N001 N002 3.0
+
+* Series inductance
+L1 N002 N003 100.04u
+
+* Parallel capacitance
+C1 N003 0 30.07n
+
+* Load resistance
+R2 N003 0 2k
+
+* Transient simulation: 0.5 ms duration, max timestep 1 µs
+.tran 0 0.5m 0 1u
+
+* Save all node voltages and branch currents
+.save all
+
+* End of netlist
+.end

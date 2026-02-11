@@ -1,0 +1,58 @@
+* Rim et al. (2025) RLC Circuit - Parametric Version
+* Uses .param for easy parameter modification
+*
+* This version allows easy parameter sweeps and modifications.
+
+* ────────────────────────────────────────────────────────────
+* PARAMETERS
+* ────────────────────────────────────────────────────────────
+
+* Component values
+.param Lval=100.04u      ; Inductance
+.param Cval=30.07n       ; Capacitance
+.param Rs=3.0            ; Series resistance
+.param Ro=2k             ; Load resistance
+
+* Computed parameters
+.param fres={1/(2*pi*sqrt(Lval*Cval))}  ; Resonant frequency
+.param Z0={sqrt(Lval/Cval)}              ; Characteristic impedance
+.param Q={Z0/Rs}                         ; Quality factor
+
+* Source parameters
+.param Vampl=1           ; Source amplitude
+.param fsrc=92.3k        ; Source frequency (slightly above resonance)
+
+* ────────────────────────────────────────────────────────────
+* CIRCUIT
+* ────────────────────────────────────────────────────────────
+
+* Voltage source
+V1 N001 0 SINE(0 {Vampl} {fsrc})
+
+* Series resistance
+R1 N001 N002 {Rs}
+
+* Series inductance
+L1 N002 N003 {Lval}
+
+* Parallel capacitance
+C1 N003 0 {Cval}
+
+* Load resistance
+R2 N003 0 {Ro}
+
+* ────────────────────────────────────────────────────────────
+* SIMULATION COMMANDS
+* ────────────────────────────────────────────────────────────
+
+* Transient analysis
+.tran 0 0.5m 0 1u
+
+* Save all signals
+.save all
+
+* Display parameters
+.meas TRAN fres_calc PARAM {fres}
+.meas TRAN Q_calc PARAM {Q}
+
+.end

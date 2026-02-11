@@ -1,0 +1,92 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dynamic-phasor-sim"
+version = "0.1.0"
+description = "Open-Source Dynamic Phasor Framework for Rapid Simulation of Switching Resonant Converters"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Doyun Gu", email = "doyun.gu@manchester.ac.uk"}
+]
+keywords = [
+    "power electronics",
+    "dynamic phasor",
+    "circuit simulation",
+    "resonant converters",
+    "phasor transformation"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "matplotlib>=3.7.0",
+    "pandas>=2.0.0",
+    "numba>=0.57.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.0.0",
+    "ruff>=0.0.260",
+]
+docs = [
+    "sphinx>=6.0.0",
+    "sphinx-rtd-theme>=1.2.0",
+    "nbsphinx>=0.9.0",
+]
+jupyter = [
+    "jupyter>=1.0.0",
+    "jupyterlab>=4.0.0",
+    "ipywidgets>=8.0.0",
+]
+all = [
+    "dynamic-phasor-sim[dev,docs,jupyter]",
+]
+
+[project.urls]
+Homepage = "https://github.com/doyungu/dynamic-phasor-sim"
+Documentation = "https://dynamic-phasor-sim.readthedocs.io"
+Repository = "https://github.com/doyungu/dynamic-phasor-sim"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ['py310', 'py311', 'py312']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "I", "N", "D", "UP"]
+ignore = ["D100", "D104"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v --cov=src/dynamic_phasor --cov-report=term-missing"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
