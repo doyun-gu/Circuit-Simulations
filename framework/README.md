@@ -7,15 +7,14 @@
 
 ## Overview
 
-This framework implements both **Instantaneous Dynamic Phasor (IDP)** and **Generalized Averaging** methods for power electronics circuit simulation, with a novel **hybrid approach** that automatically selects the optimal method based on operating conditions.
+This framework implements the **Instantaneous Dynamic Phasor (IDP)** method for power electronics circuit simulation, with **LTspice integration** for cross-validation.
 
 ### Key Features
 
-- **Dual-Method Support**: Switch between instantaneous and averaged phasor representations
-- **<3% Accuracy**: Validated against published experimental results
-- **Hybrid Solver**: Automatically selects optimal method for each operating region
-- **Comprehensive Benchmarks**: Includes Rim et al. (IEEE TPEL 2025) validation
-- **LTspice Integration**: Parse LTspice netlists and validate against SPICE results
+- **Instantaneous Dynamic Phasor**: Phasor-domain simulation without period averaging
+- **MNA-Based Circuit Construction**: Automatic state-space from LTspice netlists
+- **<3% Accuracy**: Validated against Rim et al. (IEEE TPEL 2025) benchmark
+- **LTspice Integration**: Parse netlists, compare with SPICE results
 
 ## Theoretical Background
 
@@ -29,16 +28,7 @@ Where:
 - $\theta(t)$ is an arbitrary phase angle (can be time-varying)
 - $m = 1$ for single-phase, $m = 3$ for three-phase
 
-### Generalized Averaging (Eq. 13 from Sanders et al.)
-
-$$\langle x \rangle_k(t) = \frac{1}{T}\int_0^T x(t - T + s)\,e^{-jk\omega_s(t-T+s)}\,ds$$
-
-### Hybrid Approach (This Work)
-
-Automatically switches between methods based on:
-- Signal bandwidth relative to carrier frequency
-- Switching event detection
-- Envelope variation rate
+The key advantage of IDP over classical generalized averaging (Sanders et al., 1991) is that it defines the phasor at every instant without requiring period-averaged integration, enabling accurate tracking of fast transients and switching events.
 
 ## Installation
 
