@@ -21,7 +21,7 @@ This framework implements both **Instantaneous Dynamic Phasor (IDP)** and **Gene
 
 ### Instantaneous Dynamic Phasor (Eq. 1 from Rim et al.)
 
-$$x(t) = \text{Re}\left\{\frac{1}{\sqrt{m}}\,\tilde{x}(t)\,e^{j\theta(t)}\right\}$$
+$$x(t) = \text{Re}\left\lbrace\frac{1}{\sqrt{m}}\,\tilde{x}(t)\,e^{j\theta(t)}\right\rbrace$$
 
 Where:
 - $x(t)$ is the real-space variable
