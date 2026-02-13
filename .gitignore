@@ -1,1 +1,78 @@
-./CS_library/
+./Documents/
+
+./.claude/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# LTspice output files
+*.raw
+
+# Generated figures and data
+framework/notebooks/*.png
+framework/notebooks/*.pdf
+framework/notebooks/*.csv
+framework/notebooks/*.json
+framework/notebooks/*.tex
+framework/dynamic_phasor_LTspice/*.png
+framework/dynamic_phasor_LTspice/*.raw
+
+# Archives
+*.zip

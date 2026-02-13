@@ -1,4 +1,0 @@
-Scenario,Events,Switches,Inst %,Avg %,Cost,Savings,Mean Err (Inst),Mean Err (Avg),Mean Err (Hybrid),Max Err (Hybrid)
-Step Response,2451,0,100.0%,0.0%,1.000,0.0%,2.94e-02,2.94e-02,2.94e-02,3.07e-02
-Multi-Step Response,2505,0,100.0%,0.0%,1.000,0.0%,2.20e-02,2.20e-02,2.20e-02,3.07e-02
-Load Switching,2458,0,100.0%,0.0%,1.000,0.0%,2.76e-02,2.76e-02,2.76e-02,3.04e-02

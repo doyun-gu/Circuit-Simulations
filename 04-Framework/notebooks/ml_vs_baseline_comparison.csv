@@ -1,4 +1,0 @@
-Method,Test Accuracy,Instantaneous Usage (%)
-Rule-Based (Baseline),0.957037037037037,100.0
-Random Forest,0.957037037037037,100.0
-Improvement,0.0,0.0
