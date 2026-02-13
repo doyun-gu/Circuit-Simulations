@@ -251,6 +251,4 @@ Most examples are implemented in Python using NumPy and Matplotlib.
 
 - F. N. Najm, *Circuit Simulation*. Hoboken, NJ, USA: John Wiley & Sons, 2010.
 
-- S. R. Sanders, J. M. Noworolski, X. Z. Liu, and G. C. Verghese, "Generalized averaging method for power conversion circuits," *IEEE Trans. Power Electron.*, vol. 6, no. 2, pp. 251–259, Apr. 1991.
-
 - C. T. Rim, S. A. A. Shah, H. Park, et al., "General Instantaneous Dynamic Phasor," *IEEE Trans. Power Electron.*, vol. 40, no. 11, pp. 16953–16962, Nov. 2025.
