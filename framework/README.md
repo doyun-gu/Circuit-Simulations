@@ -21,21 +21,17 @@ This framework implements both **Instantaneous Dynamic Phasor (IDP)** and **Gene
 
 ### Instantaneous Dynamic Phasor (Eq. 1 from Rim et al.)
 
-```
-x(t) = Re{(1/√m) · x̃(t) · e^(jθ(t))}
-```
+$$x(t) = \text{Re}\left\{\frac{1}{\sqrt{m}}\,\tilde{x}(t)\,e^{j\theta(t)}\right\}$$
 
 Where:
-- `x(t)` is the real-space variable
-- `x̃(t)` is the complex phasor
-- `θ(t)` is an arbitrary phase angle (can be time-varying)
-- `m` = 1 for single-phase, 3 for three-phase
+- $x(t)$ is the real-space variable
+- $\tilde{x}(t)$ is the complex phasor
+- $\theta(t)$ is an arbitrary phase angle (can be time-varying)
+- $m = 1$ for single-phase, $m = 3$ for three-phase
 
 ### Generalized Averaging (Eq. 13 from Sanders et al.)
 
-```
-⟨x⟩_k(t) = (1/T) ∫₀ᵀ x(t-T+s) · e^(-jkωs(t-T+s)) ds
-```
+$$\langle x \rangle_k(t) = \frac{1}{T}\int_0^T x(t - T + s)\,e^{-jk\omega_s(t-T+s)}\,ds$$
 
 ### Hybrid Approach (This Work)
 
@@ -86,11 +82,11 @@ benchmark.validate(t, results)
 
 | Parameter | Value |
 |-----------|-------|
-| L | 100.04 µH |
-| C | 30.07 nF |
-| Rs | 3.0 Ω |
-| Ro | 2.00 kΩ |
-| ωs | 580, 650 krad/s |
+| $L$ | 100.04 µH |
+| $C$ | 30.07 nF |
+| $R_s$ | 3.0 $\Omega$ |
+| $R_o$ | 2.00 k$\Omega$ |
+| $\omega_s$ | 580, 650 krad/s |
 
 ### Validation Results
 
