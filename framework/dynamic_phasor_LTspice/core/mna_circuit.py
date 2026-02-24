@@ -267,9 +267,12 @@ def build_mna(netlist: ParsedNetlist) -> MNASystem:
                 b[np_idx] -= val  # current leaves n+
             if nm_idx >= 0:
                 b[nm_idx] += val  # current enters n-
-        # Voltage sources: KVL row gets the source voltage
+        # Voltage sources: KVL row enforces V(n+) - V(n-) = vs(t).
+        # The branch equation row is: 0 = A[branch,n+]*V(n+) + A[branch,n-]*V(n-) + b[branch]
+        #                               = +V(n+) - V(n-) + b[branch]
+        # For V(n+) - V(n-) = vs(t) we need b[branch] = -vs(t).
         for k, func in enumerate(vsrc_funcs):
-            b[vsrc_offset + k] = func(t)
+            b[vsrc_offset + k] = -func(t)
         return b
 
     # Build state labels
@@ -754,9 +757,10 @@ class NetlistCircuit:
                     b[np_idx] -= val
                 if nm_idx >= 0:
                     b[nm_idx] += val
-            # Voltage sources
+            # Voltage sources: same sign as time-domain b_func.
+            # KVL row: 0 = +V(n+) - V(n-) + b[branch] → b[branch] = -vs_phasor(t)
             for k, func in enumerate(vsrc_phasor_funcs):
-                b[vsrc_offset + k] = func(t)
+                b[vsrc_offset + k] = -func(t)
             return b
 
         return b_phasor_func

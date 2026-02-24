@@ -66,8 +66,10 @@ htmlcov/
 .dmypy.json
 dmypy.json
 
-# LTspice output files
+# LTspice output files (binary – generally excluded)
 *.raw
+# Exception: committed simulation data for reproducibility
+!framework/dynamic_phasor_LTspice/ltspice_simulations/**/*.raw
 
 # Generated figures and data
 framework/notebooks/*.png
