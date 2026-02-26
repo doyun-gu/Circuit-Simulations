@@ -1,8 +1,12 @@
-./Documents/
+# Research documents (copyright – not for redistribution)
+Documents/
 
 # Unused logos
 logo.svg
 logo1.svg
+
+# Claude Code
+.claude/
 
 # Python cache files
 __pycache__/
